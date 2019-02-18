@@ -3,13 +3,30 @@
     "description": "Small packages to setup some basics for Porto usage",
     "type": "composer-plugin",
     "require": {
-        "laravel/laravel": "5.5"
+        "prettus/l5-repository": "^2.6",
+        "optimus/api-consumer": "^0.2.3",
+        "optimus/heimdal": "^1.5",
+        "barryvdh/laravel-cors": "^0.11"
     },
     "authors": [
         {
             "name": "Daniel S.F Silva",
-            "email": "daniel.felix05@gmail.com"
+            "email": "daniel.felix05@hotmail.com"
         }
     ],
-    "minimum-stability": "dev"
+    "keywords": [
+        "molezinha",
+        "Porto",
+        "Porto SAP"
+    ],
+    "autoload": {
+        "psr-4": {
+            "SilvaDan\\Molezinha\\": ""
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {}
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }

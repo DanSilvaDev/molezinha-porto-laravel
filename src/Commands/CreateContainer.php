@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Console\Commands;
+namespace SilvaDan\Molezinha\Commands;
 
 use Illuminate\Console\Command;
 
@@ -18,11 +18,24 @@ class CreateContainer extends Command
      *
      * @var string
      */
-    protected $description = 'Create folders for Container';
+    protected $description = 'Create Container folders structured';
     protected $paths = [
       'Actions',
       'Models',
       'Tasks',
+      'Data',
+      'Data/Seeders',
+      'Data/Factories',
+      'Data/Criteria',
+      'Data/Repositories',
+      'Data/Validators',
+      'Data/Transporters',
+      'Data/Migration',
+      'Events',
+      'Listeners',
+      'Tests',
+      'Tests/Unit',
+      'Tests/Traits',
       'UI',
       'UI/API/Controllers',
       'UI/API/Presenters',
@@ -66,7 +79,7 @@ class CreateContainer extends Command
       }
 
 
-      $this->info('Containers Created Successfully');
+      $this->info('Container Created Successfully');
 
     }
 }
