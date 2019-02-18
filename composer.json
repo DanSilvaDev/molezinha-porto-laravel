@@ -1,0 +1,15 @@
+{
+    "name": "silvadan/molezinha-porto-laravel",
+    "description": "Small packages to setup some basics for Porto usage",
+    "type": "composer-plugin",
+    "require": {
+        "laravel/laravel": "5.5"
+    },
+    "authors": [
+        {
+            "name": "Daniel S.F Silva",
+            "email": "daniel.felix05@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev"
+}
