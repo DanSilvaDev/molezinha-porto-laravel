@@ -1,7 +1,7 @@
 <?php
 
 
-namespace SilvaDan\Molezinha\Formatters;
+namespace Molezinha\Formatters;
 
 use Exception;
 use Illuminate\Http\JsonResponse;

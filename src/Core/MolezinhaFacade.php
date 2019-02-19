@@ -1,6 +1,6 @@
 <?php
 
-namespace SilvaDan\Molezinha\Core\Facades;
+namespace Molezinha\Core;
 
 use Illuminate\Support\Facades\Facade;
 /**
@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Facade;
  *
  * Base:https://github.com/ProgramadorDeValor/core/blob/master/Foundation/Facades/Apiato.php
  */
-class Molezinha extends Facade
+class MolezinhaFacade extends Facade
 {
   /**
    * Get the registered name of the component.

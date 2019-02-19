@@ -1,9 +1,9 @@
 <?php
 
-namespace SilvaDan\Molezinha\Core;
+namespace Molezinha\Core;
 
 use Mockery\Exception;
-use SilvaDan\Molezinha\Traits\General\CallableTrait;
+use Molezinha\Traits\General\CallableTrait;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\File;
 

@@ -1,7 +1,7 @@
 <?php
 
 
-namespace SilvaDan\Molezinha\Traits\Loaders;
+namespace Molezinha\Traits\Loaders;
 
 use App;
 use Illuminate\Support\Facades\File;

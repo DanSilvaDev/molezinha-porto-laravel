@@ -1,6 +1,6 @@
 <?php
 
-namespace SilvaDan\Molezinha\Traits\General;
+namespace Molezinha\Traits\General;
 
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Foundation\Events\Dispatchable;

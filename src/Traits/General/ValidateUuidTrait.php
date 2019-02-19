@@ -1,7 +1,7 @@
 <?php
 
 
-namespace SilvaDan\Molezinha\Traits\General;
+namespace Molezinha\Traits\General;
 
 
 /**

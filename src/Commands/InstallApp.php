@@ -1,6 +1,6 @@
 <?php
 
-namespace SilvaDan\Molezinha\Commands;
+namespace Molezinha\Commands;
 
 use Illuminate\Console\Command;
 
@@ -11,7 +11,7 @@ class InstallApp extends Command
      *
      * @var string
      */
-    protected $signature = 'app:install';
+    protected $signature = 'mol:app:install';
 
     /**
      * The console command description.
