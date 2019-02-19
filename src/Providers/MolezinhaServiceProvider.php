@@ -15,6 +15,7 @@ class MolezinhaServiceProvider extends ServiceProvider
    */
   protected $commands = [
     'CreateContainer' => 'command.molezinha.createcontainer',
+    'CreateModel' => 'command.molezinha.createmodel',
 
   ];
 
@@ -74,6 +75,13 @@ class MolezinhaServiceProvider extends ServiceProvider
   {
     $this->app->singleton('command.molezinha.createcontainer', function () {
       return new \Molezinha\Commands\CreateContainerCommand();
+    });
+  }
+
+  protected function registerCreateModelCommand()
+  {
+    $this->app->singleton('command.molezinha.createmodel', function ($app) {
+      return new \Molezinha\Commands\CreateModelCommand($app['files']);
     });
   }
 
