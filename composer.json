@@ -35,7 +35,7 @@
                 "Molezinha\\Providers\\MolezinhaServiceProvider"
             ],
             "aliases": {
-                "Molezinha": "Molezinha\\Core\\MolezinhaFacade"
+                "Molezinha": "Molezinha\\Core\\Facades\\Molezinha"
             }
         }
     }
