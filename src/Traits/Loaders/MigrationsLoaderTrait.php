@@ -5,6 +5,7 @@ namespace Molezinha\Traits\Loaders;
 
 use App;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Log;
 
 /**
  * Class MigrationsLoaderTrait.
@@ -18,7 +19,8 @@ trait MigrationsLoaderTrait
    */
   public function loadMigrationsFromContainers($containerName)
   {
-    $containerMigrationDirectory = base_path('app/Containers/' . $containerName . '/Data/Migrations');
+    $containerMigrationDirectory = base_path('app\\Containers\\' . $containerName . '\\Data\\Migrations');
+    Log::debug($containerMigrationDirectory);
     $this->loadMigrations($containerMigrationDirectory);
   }
 

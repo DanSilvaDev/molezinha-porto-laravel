@@ -3,7 +3,7 @@
 
 namespace Molezinha\Traits\Loaders;
 
-use Molezinha\Core\MolezinhaFacade;
+use Molezinha\Core\Facades\Molezinha;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Route;
@@ -21,8 +21,8 @@ trait RoutesLoaderTrait
    */
   public function runRoutesAutoLoader()
   {
-    $containersPaths = MolezinhaFacade::getContainersPaths();
-    $containersNamespace = MolezinhaFacade::getContainersNamespace();
+    $containersPaths = Molezinha::getContainersPaths();
+    $containersNamespace = Molezinha::getContainersNamespace();
     foreach ($containersPaths as $containerPath) {
       $this->loadApiContainerRoutes($containerPath, $containersNamespace);
       $this->loadWebContainerRoutes($containerPath, $containersNamespace);

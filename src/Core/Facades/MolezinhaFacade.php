@@ -1,6 +1,6 @@
 <?php
 
-namespace Molezinha\Core;
+namespace Molezinha\Core\Facades;
 
 use Illuminate\Support\Facades\Facade;
 /**
@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Facade;
  *
  * Base:https://github.com/ProgramadorDeValor/core/blob/master/Foundation/Facades/Apiato.php
  */
-class MolezinhaFacade extends Facade
+class Molezinha extends Facade
 {
   /**
    * Get the registered name of the component.
@@ -17,6 +17,6 @@ class MolezinhaFacade extends Facade
    */
   protected static function getFacadeAccessor()
   {
-    return 'Molezinha';
+    return 'molezinha';
   }
 }

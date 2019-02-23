@@ -37,6 +37,22 @@ class Molezinha
     }
     return $containersNames;
   }
+
+  /**
+   * Get Container Path based on Container Name
+   *
+   * @param string $name
+   * @return string
+   */
+  public function getContainerPathByName(string $name)
+  {
+    if(empty($name))
+      throw new Exception("Empty Name received on getContainerPathByName");
+
+    return base_path() . '\\app\\Containers\\'.trim($name);
+  }
+
+
   /**
    * Get the port folders names
    *
