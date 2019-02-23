@@ -38,7 +38,7 @@ class CreateMigrationCommand extends Command
   {
     $containerPath = Molezinha::getContainerPathByName($this->argument('container'));
 
-    $savePath = $containerPath . '\\Data\\Migration';
+    $savePath = $containerPath . '\\Data\\Migrations';
 
     $args =
       [

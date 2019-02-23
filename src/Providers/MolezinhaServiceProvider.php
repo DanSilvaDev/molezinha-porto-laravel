@@ -4,10 +4,18 @@ namespace Molezinha\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Molezinha\Core\Molezinha;
+use Molezinha\Traits\Loaders\AutoLoaderTrait;
 
+/**
+ * Class MolezinhaServiceProvider
+ * @package Molezinha\Providers
+ *
+ * Inspired by : https://github.com/apiato/core/blob/master/Providers/ApiatoProvider.php
+ *  and https://github.com/santigarcor/laratrust/blob/master/src/LaratrustServiceProvider.php
+ */
 class MolezinhaServiceProvider extends ServiceProvider
 {
-
+  use AutoLoaderTrait;
   /**
    * The commands to be registered.
    *
@@ -23,6 +31,10 @@ class MolezinhaServiceProvider extends ServiceProvider
 
   public function boot()
   {
+    //Load Containers and Ship Components
+    $this->runBootLoader();
+
+
   }
 
   public function register()
