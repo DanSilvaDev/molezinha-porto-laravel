@@ -1,6 +1,6 @@
 <?php
 
-namespace SilvaDan\Molezinha\Supports\Bases;
+namespace Molezinha\Supports\Bases;
 
 use Prettus\Repository\Eloquent\BaseRepository as PrettusBaseRepository;
 

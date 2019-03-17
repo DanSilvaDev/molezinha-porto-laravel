@@ -1,6 +1,6 @@
 <?php
 
-namespace SilvaDan\Molezinha\Supports\Fractal;
+namespace Molezinha\Supports\Fractal;
 
 use Prettus\Repository\Presenter\FractalPresenter;
 

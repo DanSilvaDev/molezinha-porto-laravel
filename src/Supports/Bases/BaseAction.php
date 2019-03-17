@@ -1,8 +1,8 @@
 <?php
 
-namespace SilvaDan\Molezinha\Supports\Bases;
+namespace Molezinha\Supports\Bases;
 
-use SilvaDan\Molezinha\Traits\CallableTrait;
+use Molezinha\Traits\General\CallableTrait;
 
 abstract class BaseAction
 {
