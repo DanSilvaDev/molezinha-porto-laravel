@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Traits;
+namespace Molezinha\Traits\Repositories;
 
 /**
  * Trait ConvertUuidToIdTrait
