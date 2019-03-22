@@ -16,12 +16,4 @@ abstract class BaseRepository extends PrettusBaseRepository
     $this->presenter->parseIncludes($relations);
     return $this;
   }
-
-  public function getInternalId($uuid)
-  {
-    $class = $this->model();
-    $model = $class::where('uuid', $uuid)->first();
-    return $model->id;
-  }
-
 }
