@@ -3,6 +3,8 @@
 namespace Molezinha\Commands;
 
 use Illuminate\Console\Command;
+use Illuminate\Support\Facades\File;
+use Mockery\Exception;
 use Molezinha\Core\Facades\Molezinha;
 
 class CreateMigrationCommand extends Command
@@ -36,25 +38,39 @@ class CreateMigrationCommand extends Command
    */
   public function handle()
   {
-    $containerPath = Molezinha::getContainerPathByName($this->argument('container'));
+    try
+    {
+      $containerPath = Molezinha::getContainerPathByName($this->argument('container'));
+      $savePath = $containerPath . '/Data/Migrations';
 
-    $savePath = $containerPath . '/Data/Migrations';
+      if (!file_exists($containerPath))
+      {
+        $this->call("molezinha:make:container", ['name' => $this->argument('container')]);
+      } else if (!file_exists($savePath))
+      {
+        File::makeDirectory($savePath);
+      }
 
-    $args =
-      [
-        'name' => $this->argument('name'),
-        '--path' => $savePath,
-        '--realpath' => true,
-      ];
+
+      $args =
+        [
+          'name' => $this->argument('name'),
+          '--path' => $savePath,
+          '--realpath' => true,
+        ];
 
 
-    if ($this->input->getOption('create'))
-      $args['--create'] = $this->input->getOption('create');
-    if($this->input->getOption('table'))
-      $args['--table'] = $this->input->getOption('table');
+      if ($this->input->getOption('create'))
+        $args['--create'] = $this->input->getOption('create');
+      if ($this->input->getOption('table'))
+        $args['--table'] = $this->input->getOption('table');
 
-    $this->call("make:migration", $args);
-
+      $this->call("make:migration", $args);
+    }
+    catch (Exception $e)
+    {
+      throw $e;
+    }
 
   }
 
