@@ -49,7 +49,7 @@ class Molezinha
     if(empty($name))
       throw new Exception("Empty Name received on getContainerPathByName");
 
-    return base_path() . '\\app\\Containers\\'.trim($name);
+    return base_path() . '/app/Containers/'.trim($name);
   }
 
 
@@ -105,7 +105,7 @@ class Molezinha
    */
   public function getClassFullNameFromFile($filePathName)
   {
-    return $this->getClassNamespaceFromFile($filePathName) . '\\' . $this->getClassNameFromFile($filePathName);
+    return $this->getClassNamespaceFromFile($filePathName) . '/' . $this->getClassNameFromFile($filePathName);
   }
   /**
    * get the class namespace form file path using token
@@ -204,7 +204,7 @@ class Molezinha
    */
   public function buildClassFullName($containerName, $className)
   {
-    return 'App\Containers\\' . $containerName . '\\' . $this->getClassType($className) . 's\\' . $className;
+    return 'App/Containers/' . $containerName . '/' . $this->getClassType($className) . 's/' . $className;
   }
   /**
    * Get the last part of a camel case string.

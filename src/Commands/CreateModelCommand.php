@@ -109,20 +109,8 @@ class CreateModelCommand extends GeneratorCommand
   {
     $container = trim($this->argument('container'));
     $model = trim($this->argument('name'));
-    $dir = 'App\\Containers\\' . $container . '\\Models\\'.$model;
+    $dir = 'App/Containers/' . $container . '/Models/'.$model;
     return $dir;
   }
-
-
-  /*protected function getPath($name)
-  {
-    $container = $this->argument('container');
-    $dir = base_path() . '/app/Containers/' . $container . '/Models/';
-
-    $this->info($dir);
-
-    return $dir;
-
-  }*/
 
 }
