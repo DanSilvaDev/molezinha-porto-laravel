@@ -48,7 +48,7 @@ class CreateMigrationCommand extends Command
         $this->call("molezinha:make:container", ['name' => $this->argument('container')]);
       } else if (!file_exists($savePath))
       {
-        File::makeDirectory($savePath);
+        File::makeDirectory($savePath,0755, 'true');
       }
 
 
