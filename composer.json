@@ -5,7 +5,8 @@
         "prettus/l5-repository": "^2.6",
         "optimus/api-consumer": "^0.2.3",
         "optimus/heimdal": "^1.5",
-        "barryvdh/laravel-cors": "^0.11"
+        "barryvdh/laravel-cors": "^0.11",
+        "league/fractal": "^0.17.0"
     },
     "authors": [
         {

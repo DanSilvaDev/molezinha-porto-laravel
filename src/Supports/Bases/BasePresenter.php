@@ -1,15 +1,15 @@
 <?php
 
-namespace Molezinha\Supports\Fractal;
+namespace Molezinha\Supports\Bases;
 
 use Prettus\Repository\Presenter\FractalPresenter;
 
 /**
- * Class FractalRelationshipsPresenter
+ * Class BasePresenter
  *
  * @package App\Supports\Fractal
  */
-abstract class FractalRelationshipsPresenter extends FractalPresenter
+abstract class BasePresenter extends FractalPresenter
 {
 
   /**
