@@ -14,6 +14,7 @@ use Molezinha\Core\Facades\Molezinha;
 trait AutoLoaderTrait
 {
   use MigrationsLoaderTrait;
+  use RoutesLoaderTrait;
 
   public function runBootLoader()
   {
@@ -23,5 +24,7 @@ trait AutoLoaderTrait
     {
       $this->loadMigrationsFromContainers($containerName);
     }
+
+    $this->runRoutesAutoLoader();
   }
 }

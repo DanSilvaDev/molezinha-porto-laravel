@@ -31,6 +31,10 @@ class MolezinhaServiceProvider extends ServiceProvider
 
   public function boot()
   {
+    $this->publishes([
+      __DIR__.'\\..\\Config\\molezinha.php' => config_path('molezinha.php'),
+    ]);
+
     //Load Containers and Ship Components
     $this->runBootLoader();
 

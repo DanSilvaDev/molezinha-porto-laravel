@@ -37,9 +37,9 @@ trait RoutesLoaderTrait
   private function loadApiContainerRoutes($containerPath, $containersNamespace)
   {
     // build the container api routes path
-    $apiRoutesPath = $containerPath . '/UI/API/Routes';
+    $apiRoutesPath = $containerPath . '\\UI\\API\\Routes';
     // build the namespace from the path
-    $controllerNamespace = $containersNamespace . '/Containers/' . basename($containerPath) . '/UI\API\Controllers';
+    $controllerNamespace = $containersNamespace . '\\Containers\\' . basename($containerPath) . '\\UI\\API\\Controllers';
     if (File::isDirectory($apiRoutesPath)) {
       $files = File::allFiles($apiRoutesPath);
       $files = array_sort($files, function ($file) {
@@ -59,9 +59,9 @@ trait RoutesLoaderTrait
   private function loadWebContainerRoutes($containerPath, $containersNamespace)
   {
     // build the container web routes path
-    $webRoutesPath = $containerPath . '/UI/WEB/Routes';
+    $webRoutesPath = $containerPath . '\\UI\\WEB\\Routes';
     // build the namespace from the path
-    $controllerNamespace = $containersNamespace . '/Containers/' . basename($containerPath) . '/UI/WEB/Controllers';
+    $controllerNamespace = $containersNamespace . '\\Containers\\' . basename($containerPath) . '\\UI\\WEB\\Controllers';
     if (File::isDirectory($webRoutesPath)) {
       $files = File::allFiles($webRoutesPath);
       $files = array_sort($files, function ($file) {
