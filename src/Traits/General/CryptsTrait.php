@@ -5,7 +5,7 @@ namespace App\Traits;
 use Illuminate\Contracts\Encryption\DecryptException;
 use Illuminate\Support\Facades\Log;
 
-trait Crypts
+trait CryptsTrait
 {
   /**
    * @param $value
