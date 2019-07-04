@@ -3,6 +3,7 @@
 
 namespace Molezinha\Traits\Loaders;
 
+use Illuminate\Support\Facades\Log;
 use Molezinha\Core\Facades\Molezinha;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\File;
@@ -37,7 +38,7 @@ trait RoutesLoaderTrait
   private function loadApiContainerRoutes($containerPath, $containersNamespace)
   {
     // build the container api routes path
-    $apiRoutesPath = $containerPath . '\\UI\\API\\Routes';
+    $apiRoutesPath = $containerPath . '/UI/API/Routes';
     // build the namespace from the path
     $controllerNamespace = $containersNamespace . '\\Containers\\' . basename($containerPath) . '\\UI\\API\\Controllers';
     if (File::isDirectory($apiRoutesPath)) {
@@ -59,7 +60,7 @@ trait RoutesLoaderTrait
   private function loadWebContainerRoutes($containerPath, $containersNamespace)
   {
     // build the container web routes path
-    $webRoutesPath = $containerPath . '\\UI\\WEB\\Routes';
+    $webRoutesPath = $containerPath . '/UI/WEB/Routes';
     // build the namespace from the path
     $controllerNamespace = $containersNamespace . '\\Containers\\' . basename($containerPath) . '\\UI\\WEB\\Controllers';
     if (File::isDirectory($webRoutesPath)) {
@@ -91,8 +92,11 @@ trait RoutesLoaderTrait
    */
   private function loadApiRoute($file, $controllerNamespace)
   {
+    Log::info("Controlller: ".$controllerNamespace);
     $routeGroupArray = $this->getRouteGroup($file, $controllerNamespace);
     Route::group($routeGroupArray, function ($router) use ($file) {
+      //Log::info($router);
+      Log::info("pathname: ".$file->getPathname());
       require $file->getPathname();
     });
   }

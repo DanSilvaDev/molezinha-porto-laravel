@@ -2,6 +2,7 @@
 
 namespace Molezinha\Traits\Loaders;
 
+use Illuminate\Support\Facades\Log;
 use Molezinha\Core\Facades\Molezinha;
 
 /**
@@ -22,6 +23,7 @@ trait AutoLoaderTrait
 
     foreach (Molezinha::getContainersNames() as $containerName )
     {
+      Log::info('Identified Containers: ' . $containerName);
       $this->loadMigrationsFromContainers($containerName);
     }
 

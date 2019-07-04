@@ -19,7 +19,7 @@ trait MigrationsLoaderTrait
    */
   public function loadMigrationsFromContainers($containerName)
   {
-    $containerMigrationDirectory = base_path('app\\Containers\\' . $containerName . '\\Data\\Migrations');
+    $containerMigrationDirectory = base_path('app/Containers/' . $containerName . '/Data/Migrations');
     $this->loadMigrations($containerMigrationDirectory);
   }
 
@@ -28,7 +28,7 @@ trait MigrationsLoaderTrait
    */
   public function loadMigrationsFromShip()
   {
-    $portMigrationDirectory = base_path('app\\Ship\\Migrations');
+    $portMigrationDirectory = base_path('app/Ship/Migrations');
     $this->loadMigrations($portMigrationDirectory);
   }
 
