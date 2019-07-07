@@ -3,7 +3,6 @@
 
 namespace Molezinha\Traits\Loaders;
 
-use Illuminate\Support\Facades\Log;
 use Molezinha\Core\Facades\Molezinha;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\File;
@@ -92,11 +91,8 @@ trait RoutesLoaderTrait
    */
   private function loadApiRoute($file, $controllerNamespace)
   {
-    Log::info("Controlller: ".$controllerNamespace);
     $routeGroupArray = $this->getRouteGroup($file, $controllerNamespace);
     Route::group($routeGroupArray, function ($router) use ($file) {
-      //Log::info($router);
-      Log::info("pathname: ".$file->getPathname());
       require $file->getPathname();
     });
   }

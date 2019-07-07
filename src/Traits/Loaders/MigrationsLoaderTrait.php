@@ -5,7 +5,6 @@ namespace Molezinha\Traits\Loaders;
 
 use App;
 use Illuminate\Support\Facades\File;
-use Illuminate\Support\Facades\Log;
 
 /**
  * Class MigrationsLoaderTrait.
