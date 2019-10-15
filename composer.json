@@ -1,12 +1,15 @@
 {
     "name": "silvadan/molezinha-porto-laravel",
-    "description": "Small packages to setup some basics for Porto usage",
+    "description": "Small Package to add some extra things on the Top of Apiato-core",
     "require": {
         "prettus/l5-repository": "^2.6",
         "optimus/api-consumer": "^0.2.3",
         "optimus/heimdal": "^1.5",
         "barryvdh/laravel-cors": "^0.11",
-        "league/fractal": "^0.17.0"
+        "league/fractal": "^0.17.0",
+        "apiato/core": "^2.4",
+        "wikimedia/composer-merge-plugin": "^1.4"
+
     },
     "authors": [
         {
@@ -16,9 +19,13 @@
     ],
     "license": "MIT",
     "keywords": [
-        "molezinha",
+        "Molezinha",
+        "Laravel",
         "Porto",
-        "Porto SAP"
+        "Porto SAP",
+        "Apiato",
+        "PHP",
+        "API"
     ],
     "autoload": {
         "psr-4": {
@@ -38,6 +45,19 @@
             "aliases": {
                 "Molezinha": "Molezinha\\Core\\Facades\\Molezinha"
             }
+        },
+        "merge-plugin": {
+            "include": [
+                "app/Ship/composer.json",
+                "app/Containers/*/composer.json",
+                "app/Containers/composer.json"
+            ],
+            "recurse": true,
+            "replace": false,
+            "merge-dev": true,
+            "merge-extra": false,
+            "merge-extra-deep": false,
+            "merge-scripts": true
         }
     }
 }
