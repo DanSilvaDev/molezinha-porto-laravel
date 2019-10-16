@@ -26,35 +26,35 @@ class CreateContainerCommand extends Command
       'Traits',
       'Jobs',
       'Data',
-      'Data\\Seeders',
-      'Data\\Factories',
-      'Data\\Criterias',
-      'Data\\Repositories',
-      'Data\\Validators',
-      'Data\\Transporters',
-      'Data\\Migrations',
-      'Data\\Validators',
-      'Data\\Rules',
+      'Data/Seeders',
+      'Data/Factories',
+      'Data/Criterias',
+      'Data/Repositories',
+      'Data/Validators',
+      'Data/Transporters',
+      'Data/Migrations',
+      'Data/Validators',
+      'Data/Rules',
       'Events',
       'Listeners',
       'Notifications',
       'Providers',
       'Mails',
-      'Mails\\Templates',
+      'Mails/Templates',
       'Tests',
-      'Tests\\Unit',
-      'Tests\\Traits',
+      'Tests/Unit',
+      'Tests/Traits',
       'UI',
-      'UI\\API\\Controllers',
-      'UI\\API\\Presenters',
-      'UI\\API\\Requests',
-      'UI\\API\\Routes',
-      'UI\\API\\Transformers',
-      'UI\\API\\Tests',
-      'UI\\API\\Tests\\Functional',
-      'UI\\CLI',
-      'UI\\CLI\\Commands',
-      'UI\\CLI\\Routes',
+      'UI/API/Controllers',
+      'UI/API/Presenters',
+      'UI/API/Requests',
+      'UI/API/Routes',
+      'UI/API/Transformers',
+      'UI/API/Tests',
+      'UI/API/Tests/Functional',
+      'UI/CLI',
+      'UI/CLI/Commands',
+      'UI/CLI/Routes',
     ];
 
     /**
@@ -75,7 +75,7 @@ class CreateContainerCommand extends Command
     public function handle()
     {
       $name = $this->argument('name');
-      $root = base_path() . '\\app\\Containers\\'.$name . '\\';
+      $root = base_path() . '/app/Containers/'.$name . '/';
 
 
       if (! is_dir($root)) {
