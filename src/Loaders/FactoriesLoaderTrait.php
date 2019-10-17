@@ -16,7 +16,8 @@ trait FactoriesLoaderTrait
 
     /**
      * By default Laravel takes a shared factory directory to load from it all the factories.
-     * This function changes the path to load the factories from the port directory instead.
+     * This function add the containers path and also the Laravel Default One, so
+     * new implementations or installations of this package won't be impacted.
      */
     public function loadFactoriesFromContainers()
     {

@@ -37,3 +37,11 @@ foreach (Molezinha::getContainersNames() as $containerName) {
 
 }
 
+/* Includes de Default Laravel Path also, not impacting existing implementations*/
+$files = \File::allFiles(database_path('factories'));
+foreach ($files as $factoryFile) {
+    if (\File::isFile($factoryFile)) {
+        // Include the factory files
+        include($factoryFile);
+    }
+}
