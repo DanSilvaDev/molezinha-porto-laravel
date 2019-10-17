@@ -9,7 +9,7 @@ use App\Containers\{{container-name}}\UI\{{user-interface}}\Requests\Find{{model
 use App\Containers\{{container-name}}\UI\{{user-interface}}\Requests\Update{{model}}Request;
 use App\Containers\{{container-name}}\UI\{{user-interface}}\Transformers\{{model}}Transformer;
 use App\Ship\Parents\Controllers\{{base-controller}};
-use Apiato\Core\Foundation\Facades\Apiato;
+use Molezinha\Core\Facades\Molezinha;
 
 /**
  * Class {{class-name}}

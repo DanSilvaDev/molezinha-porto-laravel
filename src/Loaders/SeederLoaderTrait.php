@@ -44,14 +44,11 @@ trait SeederLoaderTrait
         $containersDirectories = [];
 
         foreach (Molezinha::getContainersNames() as $containerName) {
-
             $containersDirectories[] = base_path('app/Containers/' . $containerName . $this->seedersPath);
-
         }
 
         $seedersClasses = $this->findSeedersClasses($containersDirectories, $seedersClasses);
         $orderedSeederClasses = $this->sortSeeders($seedersClasses);
-        Log::debug($orderedSeederClasses);
         if(!is_null($orderedSeederClasses) && count($orderedSeederClasses) > 0)
             $this->loadSeeders($orderedSeederClasses);
     }
@@ -91,9 +88,7 @@ trait SeederLoaderTrait
                 $files = File::allFiles($directory);
 
                 foreach ($files as $seederClass) {
-
                     if (File::isFile($seederClass)) {
-
                         // do not seed the classes now, just store them in a collection and w
                         $seedersClasses->push(
                             Molezinha::getClassFullNameFromFile(
@@ -103,7 +98,6 @@ trait SeederLoaderTrait
                 }
             }
         }
-
         return $seedersClasses;
     }
 

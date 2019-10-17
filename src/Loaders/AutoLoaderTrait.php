@@ -21,8 +21,6 @@ trait AutoLoaderTrait
     use ConsolesLoaderTrait;
     use AliasesLoaderTrait;
     use FactoriesLoaderTrait;
-    use RoutesLoaderTrait;
-    use SeederLoaderTrait;
 
     /**
      * * to be used from the `boot` function of the main service provider
@@ -44,9 +42,7 @@ trait AutoLoaderTrait
             $this->loadConsolesFromContainers($containerName);
             $this->loadViewsFromContainers($containerName);
         }
-        $this->runRoutesAutoLoader();
         $this->loadFactoriesFromContainers();
-        $this->runLoadingSeeders();
     }
 
 }

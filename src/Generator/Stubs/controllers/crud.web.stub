@@ -10,7 +10,7 @@ use App\Containers\{{container-name}}\UI\{{user-interface}}\Requests\Update{{mod
 use App\Containers\{{container-name}}\UI\{{user-interface}}\Requests\Store{{model}}Request;
 use App\Containers\{{container-name}}\UI\{{user-interface}}\Requests\Edit{{model}}Request;
 use App\Ship\Parents\Controllers\WebController;
-use Apiato\Core\Foundation\Facades\Apiato;
+use Molezinha\Core\Facades\Molezinha;
 
 /**
  * Class {{class-name}}

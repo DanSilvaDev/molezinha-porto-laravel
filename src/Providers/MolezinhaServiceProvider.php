@@ -2,14 +2,15 @@
 
 namespace Molezinha\Providers;
 
-use Illuminate\Foundation\Support\Providers\EventServiceProvider;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
+use Molezinha\Abstracts\Events\Providers\EventServiceProvider;
 use Molezinha\Commands\CreateContainerCommand;
 use Molezinha\Commands\CreateMigrationCommand;
 use Molezinha\Commands\CreateModelCommand;
 use Molezinha\Commands\CreateApiRequestCommand;
+use Molezinha\Commands\RunContainersSeeders;
 use Molezinha\Core\Molezinha;
 use Molezinha\Generator\GeneratorsServiceProvider;
 use Molezinha\Loaders\AliasesLoaderTrait;
@@ -43,7 +44,7 @@ class MolezinhaServiceProvider extends ServiceProvider
         // add the Laravel Tinker Service Provider
         // TinkerServiceProvider::class,
         // Internal Apiato Providers:
-        //RoutesProvider::class, // exceptionally adding the Route Provider, unlike all other providers in the parents.
+        RoutesProvider::class, // exceptionally adding the Route Provider, unlike all other providers in the parents.
         //ShipProvider::class, // the ShipProvider for the Ship third party packages.
         GeneratorsServiceProvider::class, // the code generator provider.
     ];
@@ -70,6 +71,9 @@ class MolezinhaServiceProvider extends ServiceProvider
         $this->loadServiceProviders();
         $this->loadAliases();
 
+        // load all service providers defined in this class
+        //parent::boot();
+
         // Solves the "specified key was too long" error, introduced in L5.4
         Schema::defaultStringLength(191);
         // Registering custom validation rules
@@ -79,12 +83,13 @@ class MolezinhaServiceProvider extends ServiceProvider
     public function register()
     {
         // The custom eventserviceprovider
-        // App::register(EventServiceProvider::class);
+        App::register(EventServiceProvider::class);
         $this->registerCommands([
             CreateMigrationCommand::class,
             CreateContainerCommand::class,
             CreateModelCommand::class,
-            CreateApiRequestCommand::class
+            CreateApiRequestCommand::class,
+            RunContainersSeeders::class
         ]);
         $this->registerMolezinha();
 

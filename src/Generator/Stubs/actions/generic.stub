@@ -3,7 +3,7 @@
 namespace App\Containers\{{container-name}}\Actions;
 
 use App\Ship\Parents\Actions\Action;
-use Apiato\Core\Foundation\Facades\Apiato;
+use Molezinha\Core\Facades\Molezinha;
 
 class {{class-name}} extends Action
 {
