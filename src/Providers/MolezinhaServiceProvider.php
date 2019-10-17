@@ -83,7 +83,8 @@ class MolezinhaServiceProvider extends ServiceProvider
     public function register()
     {
         // The custom eventserviceprovider
-        App::register(EventServiceProvider::class);
+        // Todo: Fiz issues related to the EventServiceProvider Class
+        //App::register(EventServiceProvider::class);
         $this->registerCommands([
             CreateMigrationCommand::class,
             CreateContainerCommand::class,
