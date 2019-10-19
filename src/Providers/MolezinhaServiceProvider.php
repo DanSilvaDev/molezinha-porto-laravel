@@ -16,6 +16,7 @@ use Molezinha\Generator\GeneratorsServiceProvider;
 use Molezinha\Loaders\AliasesLoaderTrait;
 use Molezinha\Loaders\AutoLoaderTrait;
 use Molezinha\Loaders\ProvidersLoaderTrait;
+
 // use App\Ship\Providers\ShipProvider;
 // use App\Ship\Parents\Providers\RoutesProvider;
 use Barryvdh\Cors\ServiceProvider as CorsServiceProvider;
@@ -61,7 +62,7 @@ class MolezinhaServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->publishes([
-            __DIR__.'/../Config/molezinha.php' => config_path('molezinha.php'),
+            __DIR__ . '/../Config/molezinha.php' => config_path('molezinha.php'),
         ]);
 
         //Load Containers and Ship Components
