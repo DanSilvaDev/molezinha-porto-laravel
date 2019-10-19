@@ -73,11 +73,6 @@ class MolezinhaServiceProvider extends ServiceProvider
 
         // load all service providers defined in this class
         //parent::boot();
-
-        // Solves the "specified key was too long" error, introduced in L5.4
-        Schema::defaultStringLength(191);
-        // Registering custom validation rules
-        // $this->extendValidationRules();
     }
 
     public function register()
