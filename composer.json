@@ -1,6 +1,6 @@
 {
     "name": "silvadan/molezinha-porto-laravel",
-    "description": "Small Package to add some extra things on the Top of Apiato-core",
+    "description": "Implements Porto Structure, avoiding impacting the default structure running in Laravel.",
     "require": {
         "prettus/l5-repository": "^2.6",
         "optimus/api-consumer": "^0.2.3",
