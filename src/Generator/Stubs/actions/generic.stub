@@ -1,0 +1,14 @@
+<?php
+
+namespace App\Containers\{{container-name}}\Actions;
+
+use App\Ship\Parents\Actions\Action;
+use Molezinha\Core\Facades\Molezinha;
+
+class {{class-name}} extends Action
+{
+    public function run()
+    {
+        // $var = Apiato::call('Container@Task', [$arg1, $arg2, ...]);
+    }
+}
