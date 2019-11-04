@@ -85,21 +85,6 @@ class CreateModelCommand extends GeneratorCommand
     return $rootNamespace;
   }
 
-
-  /**
-   * Get the root namespace for the class.
-   *
-   * @return string
-   */
- /* protected function rootNamespace()
-  {
-    $container = $this->argument('container');
-    $dir = 'App/Containers/' . $container . '/Models/';
-
-    $this->info($dir);
-    return $dir;
-  }*/
-
   /**
    * Get the desired class name from the input.
    *
@@ -109,7 +94,7 @@ class CreateModelCommand extends GeneratorCommand
   {
     $container = trim($this->argument('container'));
     $model = trim($this->argument('name'));
-    $dir = 'App/Containers/' . $container . '/Models/'.$model;
+    $dir = 'Containers/' . $container . '/Models/'.$model;
     return $dir;
   }
 

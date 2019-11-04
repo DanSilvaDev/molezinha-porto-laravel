@@ -105,7 +105,7 @@ class Molezinha
    */
   public function getClassFullNameFromFile($filePathName)
   {
-    return $this->getClassNamespaceFromFile($filePathName) . '/' . $this->getClassNameFromFile($filePathName);
+    return $this->getClassNamespaceFromFile($filePathName) . '\\' . $this->getClassNameFromFile($filePathName);
   }
   /**
    * get the class namespace form file path using token
@@ -202,10 +202,10 @@ class Molezinha
    *
    * @return  string
    */
-  public function buildClassFullName($containerName, $className)
-  {
-    return 'App/Containers/' . $containerName . '/' . $this->getClassType($className) . 's/' . $className;
-  }
+    public function buildClassFullName($containerName, $className)
+    {
+        return 'App\Containers\\' . $containerName . '\\' . $this->getClassType($className) . 's\\' . $className;
+    }
   /**
    * Get the last part of a camel case string.
    * Example input = helloDearWorld | returns = World
