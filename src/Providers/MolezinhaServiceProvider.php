@@ -31,8 +31,6 @@ use Barryvdh\Cors\ServiceProvider as CorsServiceProvider;
  */
 class MolezinhaServiceProvider extends ServiceProvider
 {
-    use ProvidersLoaderTrait;
-    use AliasesLoaderTrait;
     use AutoLoaderTrait;
 
     public $serviceProviders = [
