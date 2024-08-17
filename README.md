@@ -1,4 +1,6 @@
-# Molezinha - Porto Laravel
+# Archived - Molezinha - Porto Laravel
+
+## This project is no longer maintained and is available just for read-only. 
 
 ##Welcome!
 
